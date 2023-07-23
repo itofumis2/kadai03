@@ -17,7 +17,7 @@ function db_conn(){
         if($_SERVER["HTTP_HOST"] != 'localhost'){
             $db_name = "whitecentury_gs_bm_table";  //データベース名
             $db_id   = "whitecentury";  //アカウント名（さくらコントロールパネルに表示されています）
-            $db_pw   = "gs_bm_table0";  //パスワード(さくらサーバー最初にDB作成する際に設定したパスワード)
+            $db_pw   = "*****";  //パスワード(さくらサーバー最初にDB作成する際に設定したパスワード)
             $db_host = "mysql57.whitecentury.sakura.ne.jp"; //例）mysql**db.ne.jp...
         }
         return new PDO('mysql:dbname='.$db_name.';charset=utf8;host='.$db_host, $db_id, $db_pw);

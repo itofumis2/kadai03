@@ -2,9 +2,10 @@
 //１．PHP
 //select.phpの[PHPコードだけ！]をマルっとコピーしてきます。
 //※SQLとデータ取得の箇所を修正します。
+session_start();
 $id = $_GET["id"];
-
 include("funcs.php");  //funcs.phpを読み込む（関数群）
+sschk();
 $pdo = db_conn();      //DB接続関数
 
 $stmt   = $pdo->prepare("SELECT * FROM gs_db_table WHERE id=:id"); //SQLをセット

@@ -4,6 +4,7 @@ $id   = $_GET["id"];
 
 //2. DB接続します
 include("funcs.php");  //funcs.phpを読み込む（関数群）
+sschk();
 $pdo = db_conn();      //DB接続関数
 
 //３．データ登録SQL作成
